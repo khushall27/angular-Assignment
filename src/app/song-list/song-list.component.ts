@@ -7,11 +7,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SongListComponent  {
 
-  constructor() { }
-   name:string = "Khush Hall";
-   
-   playList = ["Song1","Song2","Song3","Song4"];
+ constructor() {}
 
+  SongList = ['Song1', 'Song2', 'Song3'];
+  newSong: string;
+  numSongVisible: boolean = true;
+  ngOnInit() {}
+
+  addSong(newSong: string) {
+    console.log('khush');
+    console.log(newSong);
+    this.SongList.push(newSong);
+  }
+
+  ToggleNumSong() {
+    this.numSongVisible = !this.numSongVisible;
+  }
   
 
 }

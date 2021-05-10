@@ -1,0 +1,14 @@
+<h2 *ngIf = "numSongVisible">
+  Number of songs in my playlist : {{SongList.length}}
+</h2>
+<input type="button" value="Toggle Number of Song" (click)="ToggleNumSong()" >
+<h3> My PlayList</h3>
+<h5>
+  <ul *ngFor='let name of SongList'>
+    <li>{{name}}</li>
+  </ul>
+</h5>
+
+Enter new song:  
+<input type="text" placeholder="newsong" [(ngModel)] = "newSong">
+<input type="button" value="Add Song" (click)="addSong(newSong)" >
